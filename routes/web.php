@@ -15,6 +15,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('tugas4', function () {
+    return view('htmltugas4');
+});
+
 Route::get('praktikum2', function () {
     return view('htmlprak2');
 });
+
+Route::get('formEts',"ViewController@showEts");
+Route::get('isiannama',"ViewController@showForm");
+Route::post('greetings',"ViewController@resultGreetings");
