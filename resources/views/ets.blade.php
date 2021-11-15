@@ -47,7 +47,7 @@
             border: solid 1px;
         }
 
-    
+
     </style>
 </head>
 
@@ -56,7 +56,8 @@
     <div class="container shadow-lg p-3">
 
         <h1 class="text-center mb-4">Form Input Data Barang</h1>
-        <form action="www.bukalapak.com" name="dataBarang" onsubmit=" return formValidation();">
+        <form action="https://www.bukalapak.com/" name="dataBarang" onsubmit=" return formValidation();">
+            @csrf
             <div class="row my-3">
                 <div class="col-5">
                     <label for="namabarang" class="form-label">Nama Barang</label>

@@ -10,11 +10,19 @@ class ViewController extends Controller
     function showEts() {
         return view('ets');
     }
-    function showForm(){
-        return view('showgreetings');
+    // function showForm(){
+    //     return view('showgreetings');
+    // }
+
+    // function resultGreetings(){
+    //     return view('tugas');
+    // }
+
+    function showDictionary() {
+        return view('kamusgaul');
     }
 
-    function resultGreetings(){
-        return view('tugas');
+    function resultDictionary(){
+        return view('artikata');
     }
 }

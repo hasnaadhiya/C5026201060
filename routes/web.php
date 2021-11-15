@@ -24,5 +24,7 @@ Route::get('praktikum2', function () {
 });
 
 Route::get('formEts',"ViewController@showEts");
-Route::get('isiannama',"ViewController@showForm");
-Route::post('greetings',"ViewController@resultGreetings");
+// Route::get('isiannama',"ViewController@showForm");
+// Route::post('greetings',"ViewController@resultGreetings");
+Route::get('kamus',"ViewController@showDictionary");
+Route::post('artikata',"ViewController@resultDictionary");
