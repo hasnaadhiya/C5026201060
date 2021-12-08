@@ -1,26 +1,74 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Tutorial Membuat CRUD Pada Laravel - www.malasngoding.com</title>
-</head>
-<body>
+@extends('layout.bahagia')
 
-	<h2>WEEK 13</h2>
-	<h3>Data Mutasi</h3>
+@section('title', 'Data Mutasi')
+@section('judulhalaman', 'Tambah Mutasi')
 
-	<a href="/mutasi"> Kembali</a>
+@section('konten')
+<div>
+	<a href="/mutasi" class="btn btn-primary my-2 mb-3"> < Kembali</a>
+</div>
 
-	<br/>
-	<br/>
-
-	<form action="/mutasi/store" method="post">
+	<form action="/mutasi/store" method="post" class="table-responsive">
 		{{ csrf_field() }}
-		IDPegawai <input type="text" name="idpegawai" required="required"> <br/>
-		Departemen <input type="text" name="departemen" required="required"> <br/>
-		SubDepartemen <input type="text" name="subdepartemen" required="required"> <br/>
-		Mulai Bertugas <input type="datetime" name="mulaibertugas" required="required"> <br/>
-		<input type="submit" value="Simpan Data">
+
+        <div class="row mb-3">
+            <div class="col-2">
+                <label class="form-label">ID Pegawai</label>
+            </div>
+            <div class="col-5">
+                <input type="text" class="form-control" name="idpegawai" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">
+                <label class="form-label">Departemen</label>
+            </div>
+            <div class="col-5">
+                <input type="text" class="form-control" name="departemen" required>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <div class="col-2">
+                <label class="form-label">SubDepartemen</label>
+            </div>
+            <div class="col-5">
+                <input type="text" class="form-control" name="subdepartemen" required>
+            </div>
+        </div>
+
+        <div class="row mb-3">
+            <div class="col-2">
+                <div class="input-group mb-3">
+                    <label class="form-label" for="datetimepicker1">Mulai Bertugas</label>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class='input-group' id='datetimepicker1' data-td-target-input='nearest' data-td-target-toggle='nearest'>
+                    <input id='datetimepicker1Input' type='text' class='form-control' name="mulaibertugas" data-td-target='#datetimepicker1' required/>
+                    <span class='input-group-text' data-td-target='#datetimepicker1' data-td-toggle='datetimepicker'>
+                        <span class='fas fa-calendar'></span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-5">
+                <input class="btn btn-success" type="submit" value="Simpan Data">
+
+            </div>
+        </div>
 	</form>
 
-</body>
-</html>
+<script>
+    new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'), {
+        hooks: {
+            inputFormat: (context, date) => {
+            return moment(date).format('YYYY-MM-DD hh:mm:ss')
+            }
+        }
+    });
+</script>
+
+@endsection
