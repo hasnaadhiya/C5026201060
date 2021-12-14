@@ -12,10 +12,11 @@
 
         <div class="row mb-3">
             <div class="col-2">
-                <label for="idpegawai" class="form-label">IDPegawai</label>
+                <label for="idpegawai" class="form-label">Nama</label>
             </div>
             <div class="col-5">
                 <select  class="form-select" name="idpegawai" id="">
+                    <option value="" readonly="true" hidden="true"></option>
                     @foreach($pegawai as $p)
                         <option value="{{ $p->pegawai_id }}">{{ $p->pegawai_nama }}</option>
                     @endforeach

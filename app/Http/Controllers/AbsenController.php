@@ -11,7 +11,12 @@ class AbsenController extends Controller
     public function indexabsen()
     {
         // mengambil data dari table absen
-        $absen = DB::table('absen')->get();
+        // $absen = DB::table('absen')->get();
+
+        $absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_ID')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+        ->paginate(5);
 
         // mengirim data absen ke view indexabsen
         return view('absen.indexabsen', ['absen' => $absen]);
@@ -26,6 +31,35 @@ class AbsenController extends Controller
         // memanggil view add
         return view('absen.add', ['pegawai' => $pegawai]);
     }
+    public function cari(Request $request)
+	{
+		// menangkap data pencarian
+		$cari = $request->cari;
+
+    	// mengambil data dari table absen sesuai pencarian data
+		$absen = DB::table('absen')
+        ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_ID')
+        ->select('absen.*', 'pegawai.pegawai_nama')
+		->where('pegawai_nama','like',"%" . $cari . "%")
+        ->orWhere('Status','like',"%" . $cari . "%")
+		->paginate();
+
+    	// mengirim data absen ke view index
+		return view('absen.indexabsen',['absen' => $absen]);
+
+	}
+
+    public function detail($id)
+    {
+        // mengambil data absen berdasarkan id yang dipilih
+        $absen = DB::table('absen')
+            ->join('pegawai', 'absen.IDPegawai', '=', 'pegawai.pegawai_id')
+            ->select('absen.*', 'pegawai.pegawai_nama')
+            ->where('ID', $id)->get();
+        // passing data absen yang didapat ke view edit.blade.php
+        return view('absen.detail', ['absen' => $absen]);
+    }
+
     // method untuk insert data ke table absen
     public function store(Request $request)
     {

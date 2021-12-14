@@ -15,7 +15,7 @@
             <form action="/pegawai/cari" method="GET">
                 <div class="input-group input-group-sm">
                     <input type="text" class="form-control" name="cari" placeholder="Cari nama / alamat pegawai.." value="{{ old('cari') }}">
-                    <button class="btn btn-outline-secondary" type="button">Cari</button>
+                    <button class="btn btn-outline-primary" type="submit">Cari</button>
                 </div>
             </form>
         </div>

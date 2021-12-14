@@ -46,6 +46,8 @@ Route::post('/mutasi/store','MutasiController@store');
 Route::get('/mutasi/edit/{id}','MutasiController@edit');
 Route::post('/mutasi/update','MutasiController@update');
 Route::get('/mutasi/hapus/{id}','MutasiController@hapus');
+Route::get('/mutasi/cari','MutasiController@cari');
+Route::get('/mutasi/view/{id}','MutasiController@detail');
 
 //route CRUD absen
 Route::get('/absen','AbsenController@indexabsen');
@@ -54,6 +56,8 @@ Route::post('/absen/store','AbsenController@store');
 Route::get('/absen/edit/{id}','AbsenController@edit');
 Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
+Route::get('/absen/cari','AbsenController@cari');
+Route::get('/absen/view/{id}','AbsenController@detail');
 
 //route CRUD lipstick
 Route::get('/lipstick','LipstickController@index');
