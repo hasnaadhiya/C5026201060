@@ -8,18 +8,14 @@
 <div class="container">
     <div class="row">
         <div class="col-3">
-            <a href="/pegawai/tambah" class="btn btn-primary my-2 mb-3"> + Tambah Pegawai</a>
+            <a href="/pegawai/tambah" class="btn btn-primary btn-sm my-2 mb-3"> + Tambah Pegawai</a>
         </div>
         <div class="col-5"></div>
         <div class="col-4">
             <form action="/pegawai/cari" method="GET">
-                <div class="col-9">
-                    <input type="text" class="form-control" name="cari" placeholder="Cari Pegawai berdasarkan nama atau alamat .." value="{{ old('cari') }}">
-
-                </div>
-                <div class="col-3">
-                    <input type="submit" class="btn btn-default" value="CARI">
-
+                <div class="input-group input-group-sm">
+                    <input type="text" class="form-control" name="cari" placeholder="Cari nama / alamat pegawai.." value="{{ old('cari') }}">
+                    <button class="btn btn-outline-secondary" type="button">Cari</button>
                 </div>
             </form>
         </div>
@@ -27,16 +23,13 @@
 
 </div>
 
-    <div class="container" align="center">
-    </div>
-
-	<table class="table table-striped table-hover table-bordered align-middle text-center">
-		<tr>
-			<th>Nama</th>
+	<table class="table table-hover table-bordered table-light align-middle">
+		<tr class="text-center table-primary">
+			<th width="30%">Nama</th>
 			{{-- <th>Jabatan</th>
 			<th>Umur</th> --}}
 			<th>Alamat</th>
-			<th width=20%>Opsi</th>
+			<th width="30%">Opsi</th>
 		</tr>
 		@foreach($pegawai as $p)
         {{-- foreach khusus nampilin array  --}}
@@ -45,7 +38,7 @@
 			{{-- <td>{{ $p->pegawai_jabatan }}</td>
 			<td>{{ $p->pegawai_umur }}</td> --}}
 			<td>{{ $p->pegawai_alamat }}</td>
-			<td>
+			<td class="text-center">
                 <a href="/pegawai/view/{{ $p->pegawai_id }}" class="btn btn-outline-primary">Detail</a>
                 &nbsp;
 				<a href="/pegawai/edit/{{ $p->pegawai_id }}" class="btn btn-outline-warning">Edit</a>

@@ -6,10 +6,10 @@
 
 @section('konten')
 <div>
-	<a href="/absen" class="btn btn-primary my-2 mb-3"> < Kembali</a>
+	<a href="/absen" class="btn btn-primary btn-sm my-2 mb-3"> < Kembali</a>
 </div>
 
-	@foreach($absen as $a)
+@foreach($absen as $a)
 
 	<form action="/absen/update" method="post" class="table-responsive">
 		{{ csrf_field() }}
@@ -84,7 +84,7 @@
             </div>
         </div>
 	</form>
-	@endforeach
+@endforeach
     <script>
         new tempusDominus.TempusDominus(document.getElementById('datetimepicker1'), {
             hooks: {
@@ -95,4 +95,4 @@
         });
     </script>
 
-   @endsection
+@endsection

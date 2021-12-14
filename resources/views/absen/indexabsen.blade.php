@@ -1,18 +1,18 @@
 @extends('layout.bahagia')
 
-@section('title', 'Data Absensi')
-@section('judulhalaman', 'Daftar Absensi')
+@section('title', 'Data Absen')
+@section('judulhalaman', 'Daftar Absen')
 
 @section('konten')
 <div>
-	<a href="/absen/add" class="btn btn-primary my-2 mb-3"> + Tambah Absensi</a>
+	<a href="/absen/add" class="btn btn-primary btn-sm my-2 mb-3"> + Tambah Absensi</a>
 </div>
 
 	<br/>
 	<br/>
 
-	<table class="table table-striped table-hover table-bordered align-middle text-center">
-		<tr>
+	<table class="table table-hover table-bordered table-light align-middle">
+		<tr class="text-center table-primary">
 
 			<th>IDPegawai</th>
 			<th>Tanggal</th>

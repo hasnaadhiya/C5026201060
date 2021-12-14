@@ -29,7 +29,7 @@ Route::get('formEts',"ViewController@showEts");
 Route::get('kamus',"ViewController@showDictionary");
 Route::post('artikata',"ViewController@resultDictionary");
 
-//route CRUD
+//route CRUD pegawai
 Route::get('/pegawai','PegawaiController@index');
 Route::get('/pegawai/tambah','PegawaiController@tambah');
 Route::post('/pegawai/store','PegawaiController@store');
@@ -56,9 +56,11 @@ Route::post('/absen/update','AbsenController@update');
 Route::get('/absen/hapus/{id}','AbsenController@hapus');
 
 //route CRUD lipstick
-Route::get('/lipstick','LipstickController@indexlipstick');
-// Route::get('/absen/add','AbsenController@add');
-// Route::post('/absen/store','AbsenController@store');
-// Route::get('/absen/edit/{id}','AbsenController@edit');
-// Route::post('/absen/update','AbsenController@update');
-// Route::get('/absen/hapus/{id}','AbsenController@hapus');
+Route::get('/lipstick','LipstickController@index');
+Route::get('/lipstick/tambah','LipstickController@tambah');
+Route::post('/lipstick/store','LipstickController@store');
+Route::get('/lipstick/edit/{kodelipstick}','LipstickController@edit');
+Route::post('/lipstick/update','LipstickController@update');
+Route::get('/lipstick/hapus/{kodelipstick}','LipstickController@hapus');
+Route::get('/lipstick/detail/{kodelipstick}','LipstickController@detail');
+Route::get('/lipstick/cari','LipstickController@cari');

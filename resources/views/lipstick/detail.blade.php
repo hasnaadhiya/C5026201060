@@ -1,44 +1,44 @@
 @extends('layout.bahagia')
 
-@section('title', 'Data Pegawai')
+@section('title', 'Data Lipstick')
 @section('judulhalaman', 'Detail Pegawai')
 
 @section('konten')
 <div>
-	<a href="/pegawai" class="btn btn-primary btn-sm my-2 mb-3"> < Kembali</a>
+	<a href="/lipstick" class="btn btn-primary btn-sm my-2 mb-3"> < Kembali</a>
 </div>
 
-	@foreach($pegawai as $p)
+	@foreach($lipstick as $l)
         <div class="row mb-3">
             <div class="col-2">
-                <label for="nama" class="form-label">Nama</label>
+                <label for="kode" class="form-label">Kode</label>
             </div>
             <div class="col-5">
-                {{ $p->pegawai_nama }}
+                {{ $l->kodelipstick }}
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-2">
-                <label for="jabatan" class="form-label">Jabatan</label>
+                <label for="merk" class="form-label">Merk</label>
             </div>
             <div class="col-5">
-                {{ $p->pegawai_jabatan }}
+                {{ $l->merklipstick }}
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-2">
-                <label for="umur" class="form-label">Umur</label>
+                <label for="stock" class="form-label">Stock</label>
             </div>
             <div class="col-5">
-               {{ $p->pegawai_umur }}
+               {{ $l->stocklipstick }}
             </div>
         </div>
         <div class="row mb-3">
             <div class="col-2">
-                <label for="alamat" class="form-label">Alamat</label>
+                <label for="tersedia" class="form-label">Tersedia</label>
             </div>
             <div class="col-5">
-              {{ $p->pegawai_alamat }}
+              {{ $l->tersedia }}
             </div>
         </div>
 

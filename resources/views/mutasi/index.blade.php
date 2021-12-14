@@ -6,14 +6,14 @@
 @section('konten')
 
 <div>
-	<a href="/mutasi/tambah" class="btn btn-primary my-2 mb-3"> + Tambah Data Mutasi Baru</a>
+	<a href="/mutasi/tambah" class="btn btn-primary btn-sm my-2 mb-3"> + Tambah Data Mutasi Baru</a>
 </div>
 
 	<br/>
 	<br/>
 
-	<table class="table table-striped table-hover table-bordered align-middle text-center">
-		<tr>
+	<table class="table table-hover table-bordered table-light align-middle">
+		<tr class="text-center table-primary">
 			<th>ID Pegawai</th>
 			<th>Departemen</th>
 			<th>SubDepartemen</th>
@@ -22,7 +22,7 @@
 		</tr>
 		@foreach($mutasi as $m)
 		<tr>
-			<td>{{ $m->IDPegawai }}</td>
+			<td >{{ $m->IDPegawai }}</td>
 			<td>{{ $m->Departemen }}</td>
 			<td>{{ $m->SubDepartemen }}</td>
 			<td>{{ $m->MulaiBertugas }}</td>

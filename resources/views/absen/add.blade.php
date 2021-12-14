@@ -5,7 +5,7 @@
 
 @section('konten')
 <div>
-	<a href="/absen" class="btn btn-primary my-2 mb-3"> < Kembali</a>
+	<a href="/absen" class="btn btn-primary btn-sm my-2 mb-3"> < Kembali</a>
 </div>
 	<form action="/absen/store" method="post" class="table-responsive">
 		{{ csrf_field() }}

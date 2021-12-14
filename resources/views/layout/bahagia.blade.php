@@ -60,16 +60,14 @@
                                     <a href="/mutasi" class="nav-link text-dark">Data Mutasi</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link disabled">Minggu Depan</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link disabled">Praktikum</a>
+                                    <a href="/lipstick" class="nav-link text-dark">Lipstick</a>
                                 </li>
                             </ul>
                         </div>
                       </nav>
                 </div>
             </aside>
+
             <div class="col-10">
                 <div class="row container-fluid rounded bg-secondary bg-opacity-10 p-4">
                     <h2 class="fw-bold">@yield('judulhalaman')</h2>
