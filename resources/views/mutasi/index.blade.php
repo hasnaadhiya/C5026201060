@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3">
-            <a href="/mutasi/tambah" class="btn btn-primary btn-sm my-2 mb-3"> + Tambah Pegawai</a>
+            <a href="/mutasi/tambah" class="btn btn-primary btn-sm my-2 mb-3"> + Tambah Mutasi</a>
         </div>
         <div class="col-5"></div>
         <div class="col-4">

@@ -62,6 +62,9 @@
                                 <li class="nav-item">
                                     <a href="/lipstick" class="nav-link text-dark">Lipstick</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a href="/karyawan1" class="nav-link text-dark">Karyawan</a>
+                                </li>
                             </ul>
                         </div>
                       </nav>

@@ -14,7 +14,7 @@
                 <label for="idpegawai" class="form-label">ID Pegawai</label>
             </div>
             <div class="col-5">
-                {{ $m->ID }}
+                {{ $m->IDPegawai }}
             </div>
         </div>
         <div class="row mb-3">
