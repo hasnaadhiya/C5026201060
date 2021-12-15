@@ -12,9 +12,9 @@ class Karyawan1Controller extends Controller
         // DB::table('')->get(); //hasil get() adalah Array of object [object][]
 
         // mengambil data dari table karyawan (diambil semuanya pake get())
-        $karyawan1 = DB::table('karyawan1')->get();
+        // $karyawan1 = DB::table('karyawan1')->get();
 
-        // $karyawan1 = DB::table('karyawan1')->paginate(5);
+        $karyawan1 = DB::table('karyawan1')->paginate(3);
 
         // mengirim data karyawan ke view index
         return view('karyawan1.index', ['karyawan1' => $karyawan1]); //teknik komunikasi / passing value antara controller dan view

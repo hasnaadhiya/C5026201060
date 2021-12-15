@@ -44,7 +44,7 @@
 		@endforeach
 	</table>
 
-    {{-- pagination
-    {{ $karyawan1->links() }} --}}
+    {{-- pagination --}}
+    {{ $karyawan1->links() }}
 
 @endsection
